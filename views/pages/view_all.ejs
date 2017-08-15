@@ -1,0 +1,37 @@
+<%- contentFor('main') %>
+<% include slider %>
+
+<section id="recent-works">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <h3>Our Latest Project</h3>
+                            <div class="row">
+                                <% for(var i=0; i<games.length; i++) { %>
+                                    <div class="col-xs-4">
+                                        <div class="portfolio-item">
+                                            <div class="item-inner">
+                                                <img class="img-responsive" src="images/thumbnail/<%= games[i].thumbnail %>" alt="">
+                                                <h5>
+                                                    <%= games[i].name %>
+                                                </h5>
+                                                <div class="overlay">
+                                                    <a class="preview btn btn-danger" title="" href="play?id=<%= games[i].id %>" ><i class="icon-eye-open"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% } %>
+                            </div><!--/.row-->
+                        </div><!--/.item-->
+                    </div>
+                </div>
+            </div>
+        </div><!--/.row-->
+    </div>
+</section><!--/#recent-works-->
+
+

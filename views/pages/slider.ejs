@@ -1,0 +1,32 @@
+<section id="main-slider" class="no-margin">
+    <div class="carousel slide wet-asphalt">
+        <ol class="carousel-indicators">
+            <% for (var i=0; i < silderbars.length; i++) { %>
+                <li data-target="#main-slider" data-slide-to="<%= i %>" <% if (i == 0) { %> class="active" <% } %> ></li>
+            <% } %>
+        </ol>
+        <div class="carousel-inner">
+            <% for (var j=0; j < silderbars.length; j++) { %>
+                <div class="item <% if (j == 0) { %> active <% } %>" style="background-image: 
+                url(images/slider/<%= silderbars[j].image %>)">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="carousel-content centered">
+                                    <h2 class="animation animated-item-1"><%= silderbars[j].title %></h2>
+                                    <p class="animation animated-item-2"><%= silderbars[j].content %></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            <% } %>
+        </div><!--/.carousel-inner-->
+    </div><!--/.carousel-->
+    <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+        <i class="icon-angle-left"></i>
+    </a>
+    <a class="next hidden-xs" href="#main-slider" data-slide="next">
+        <i class="icon-angle-right"></i>
+    </a>
+</section><!--/#main-slider-->
