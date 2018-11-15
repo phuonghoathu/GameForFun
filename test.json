@@ -1,0 +1,1 @@
+{"id":"prf_wrk_plc_cd",        "question":"希望勤務地",    "type":"multiselect",    "required":"true",    "options":      [         {"value":"01100000","label":"札幌市"},         {"value":"01000000","label":"その他北海道"},         {"value":"02000000","label":"青森県"}      ]   }
